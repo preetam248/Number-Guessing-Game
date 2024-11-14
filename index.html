@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        html,body {
+            background-color: #c98517;
+            color: #f0f8ff;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        #card {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: #110c3a;
+            box-shadow: 2px 3px 5px white;
+            height: 430px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <h1>⭐⭐Number Guessing Game⭐⭐</h1>
+        <p>😄😁Try and guess a random number between 1-100😄😁</p>
+        <p>🤗👍🏼You have 10 attempts to guess the right number.🤗✌️</p>
+        <h2>Guess a number</h2>
+        <input type="number" id="inputVal"><br><br>
+        <button id="btn">Submit Guess</button>
+        <p>Previous Guesses: <span id="arr"></span></p>
+        <p>Guess Remaining: <span id="rem">10</span></p>
+        <h3 id="res"></h3>
+        <h3 id="reset" style="cursor: pointer;"></h3>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
