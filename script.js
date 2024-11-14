@@ -72,20 +72,22 @@ function endGame() {
     userInput.setAttribute("disabled", "");
     resetBtn.textContent = "Restart"
     playGame = false;
-    startGame()
 }
 
+resetBtn.addEventListener("click", function () {
+    startGame();
+},false)
+
+
 function startGame() {
-    resetBtn.addEventListener("click", function () {
-        randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
-        // console.log(randomNumber);
-        array = [];
-        guessArr.textContent = array;
-        i = 0;
-        guessRem.textContent = "10";
-        userInput.removeAttribute("disabled");
-        result.textContent = "";
-        resetBtn.textContent = ""
-        playGame = true;
-    },false)
+    randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    // console.log(randomNumber);
+    array = [];
+    guessArr.textContent = array;
+    i = 0;
+    guessRem.textContent = "10";
+    userInput.removeAttribute("disabled");
+    result.textContent = "";
+    resetBtn.textContent = ""
+    playGame = true;
 }
